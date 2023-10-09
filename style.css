@@ -1,0 +1,326 @@
+:root{
+--background-color:#000;
+--color:#fff;
+--secondary-color:#db0001;
+--lg-color-1:rgba(0,0,0,0.7);
+--lg-color2:rgba(0,0,0,0.7);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppings',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--background-color);
+    color: var(--color);
+    overflow-x: hidden;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(var(--lg-color-1),var(--lg-color2)),url('./assets/images/5.png');
+    background-position: center;
+    background-size: cover;
+    padding: 10px 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+
+}
+nav button{
+    border: none;
+    outline: 0;
+    background-color: #db0001;
+    color: #fff;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 7px 20px ;
+}
+
+.longuage-btn{
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #fff;
+    gap: 5px;
+    padding: 7px 10px;
+}
+.longuage-btn img{
+    width:  8px ;
+    margin-left: 5px;
+}
+/*header içerik alanı*/
+
+.header-content{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+
+}
+
+.header-content h1{
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 80px;
+    max-height: 700px;
+}
+
+.header-content h3{
+    font-weight: 400;
+
+    margin-bottom: 20px;
+}
+
+.email-signup{
+
+background: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+overflow: hidden;
+border-radius: 5px;
+}
+
+.email-signup input{
+    
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 10px;
+
+}
+
+.header-content p{
+
+display: block;
+margin-bottom: 8px;
+font-size: 18px;
+
+}
+
+.email-signup button{
+    background-color: var(--secondary-color);
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 18px 30px;
+
+}
+
+
+
+
+
+
+/*header içerik alanı bitiş*/
+
+
+/*hizmetler alanı başlangıç*/
+.features{
+    padding: 50px 10%;
+    font-size: 25px;
+
+}
+
+.satir{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+
+    
+}
+
+.text-col{
+    flex-basis:50% ;
+
+}
+    
+
+
+.img-col {
+    
+    flex-basis: 50%;
+    
+}
+.img-col img{
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+.text-col h2{
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+}
+
+
+
+/*hizmetler alanı bitiş*/
+
+/*Sıkça Sorulan Sorular*/
+
+.faq{
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 20px;
+
+}
+.faq h2{
+ font-weight: 500;
+ font-size: 40px;
+
+}
+.accordian{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 700px;
+
+}
+.accordian li{
+    list-style: none;
+    width: 100%;
+    padding: 7px;
+
+}
+.accordian li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #303030;
+    cursor: pointer;
+    position: relative;
+
+
+}
+label::after{
+    content: '+';
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5;
+
+}
+
+
+input[type="radio"]{
+
+    display: none;
+
+}
+
+ .accordian .content{
+    
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s , padding 0.5s ;
+
+}
+input[ type="radio"]:checked+label+.content{
+    max-height: 500px;
+}
+ 
+input[ type="radio"]:checked+label::after{
+    transform: rotate( 130deg);
+}
+/* ready bar başlangıç */
+small{
+    font-size: 15px;
+}
+/* ready bar bitiş  */
+
+/* footer alanı başlangıç*/
+footer{
+    padding: 50px 10px;
+    border-top: 8px solid #303030;
+    color: #777;
+    margin-top: 5px;
+    padding: 0 50px;
+
+
+
+}
+
+footer .row{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+footer .col{
+    width: 100px;
+    flex-grow: 1;
+    margin-bottom: 15px;
+
+
+ }
+
+
+ footer h2{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 1opx;
+    margin-bottom: 1opx ;
+
+ }
+ 
+ footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-size: 20px;
+    margin-bottom: 4px;
+
+
+ }
+
+
+/*footer alanı bitiş*/
+
+
+/* Farklı Ekran Boyutları İçin Ayarlama */
+
+
+
+/*Media sorguları*/
+
+
+@media only screen and (max-width:768px){
+    .logo{
+        width:100px;
+
+    }
+    .nav button{
+        padding: 3px 10px;
+
+    }
+    .satir:nth-child(2), .satir:nth-child(4){
+        flex-direction: column-reverse;
+    
+
+}
